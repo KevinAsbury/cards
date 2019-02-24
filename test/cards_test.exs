@@ -6,7 +6,8 @@ defmodule CardsTest do
     assert Cards.create_deck() == ["Ace", "Two", "Four"]
   end
 
-  test "Shuffles deck" do
-    # assert Cards.shuffle([])
+  test "Contains card" do
+    deck = Cards.create_deck;
+    assert Cards.contains?(deck, "Ace")
   end
 end

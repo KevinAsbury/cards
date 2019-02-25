@@ -23,7 +23,12 @@ defmodule Cards do
   end
 
   @doc """
-    Returns true if a deck contains a string, otherwise false
+    Determines whether a deck contains a given card
+
+  ## Examples
+       iex> deck = Cards.create_deck
+       iex> deck = Cards.contains?(deck, "Jack of Spades")
+       true
   """
   def contains?(deck, card) do
     Enum.member?(deck, card)
@@ -38,7 +43,7 @@ defmodule Cards do
        iex> deck = Cards.create_deck
        iex> {hand, deck} = Cards.deal(deck, 1)
        iex> hand
-       ["Ace of Spades"]
+       ["Ace of Diamonds"]
   """
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
